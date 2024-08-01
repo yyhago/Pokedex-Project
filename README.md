@@ -9,7 +9,7 @@ A Pokedex é um projeto para praticar habilidades de desenvolvimento web usando 
 - 🔍 **Busca de Pokémon**: Procure por Pokémon pelo nome.
 - 📋 **Detalhes do Pokémon**: Veja informações detalhadas como tipo, habilidades e imagem.
 - 📑 **Lista de Pokémon**: Navegue por uma lista com paginação.
-- 🎨 **Interface Responsiva**: Design adaptado para diferentes tamanhos de tela.
+- 🎨 **Interface Responsiva**: Design adaptado para diferentes tamanhos de tela!
 
 ## Tecnologias Utilizadas
 
