@@ -1,23 +1,12 @@
-// Define o offset inicial e o número de Pokémon a serem buscados
-const offset = 0;
-const limit = 10;
-
-// Seleciona o primeiro elemento com a classe 'pokemonsItens' para inserir a lista de Pokémon
 const pokemonListHtml = document.getElementsByClassName('pokemonsItens')[0];
 
-// Chama a função para buscar os Pokémon da API com o offset e limite definidos
-pokeAPI.getPokemons(offset, limit).then((pokemonList) => {
-    // Limpa o conteúdo HTML do elemento pokemonListHtml
-    pokemonListHtml.innerHTML = '';
-    
-    // Itera sobre cada Pokémon na lista retornada e adiciona seu HTML ao elemento
-    pokemonList.forEach((pokemon) => {
-        // Converte o Pokémon para HTML e insere no elemento pokemonListHtml
-        pokemonListHtml.innerHTML += pokemonConvertToHtml(pokemon);
-    });
-}).catch((error) => console.log(error)); // Exibe erros no console
 
-// Função que converte um objeto Pokémon para uma string HTML
+pokeAPI.getPokemons().then((pokemons = []) => {
+    const newHtml = pokemons.map(pokemonConvertToHtml).join("");
+    pokemonListHtml.innerHTML +=  newHtml;
+})
+
+
 function pokemonConvertToHtml(pokemon) {
     return `
         <li class="pokemon">
