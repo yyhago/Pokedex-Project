@@ -1,13 +1,13 @@
 const pokeAPI = {};
 
-function convertPokeAPIDetailsToPokemon(pokeDetails){
+function convertPokeAPIDetailsToPokemon(pokeDetails) {
     const pokemon = new Pokemon();
-
-    pokemon.number = pokeDetails.order;
+    
+    pokemon.number = pokeDetails.id;
     pokemon.name = pokeDetails.name;
 
     const types = pokeDetails.types.map((typeSlot) => typeSlot.type.name);
-    const [type] = types
+    const [type] = types;
 
     pokemon.types = types;
     pokemon.type = type;
@@ -17,15 +17,13 @@ function convertPokeAPIDetailsToPokemon(pokeDetails){
     return pokemon;
 }
 
-
 pokeAPI.getPokemonDetails = (pokemon) => {
     return fetch(pokemon.url)
         .then((response) => response.json())
-        .then(convertPokeAPIDetailsToPokemon)
-}
+        .then(convertPokeAPIDetailsToPokemon);
+};
 
-pokeAPI.getPokemons = (offset = 0, limit = 20) => {
-
+pokeAPI.getPokemons = (offset = 0, limit = 151) => {
     const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`;
 
     return fetch(url)
