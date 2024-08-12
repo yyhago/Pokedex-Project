@@ -4,6 +4,12 @@
 
 A **Pokedex** é um projeto desenvolvido para praticar habilidades de desenvolvimento web utilizando HTML, CSS e JavaScript. O objetivo do projeto é criar uma aplicação que exiba informações detalhadas sobre Pokémon, permitindo a busca, visualização e navegação por uma lista de Pokémon. A aplicação utiliza a **PokéAPI** para buscar e exibir os dados dos Pokémon.
 
+## Screenshots
+
+### Tela Principal
+![Tela Principal](/pictures/screenMain.PNG)
+
+
 ## Funcionalidades
 
 - 🔍 **Busca de Pokémon**: Permite procurar Pokémon pelo nome ou ID.
