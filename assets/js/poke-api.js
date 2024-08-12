@@ -33,3 +33,20 @@ pokeAPI.getPokemons = (offset = 0, limit = 151) => {
         .then((detailRequests) => Promise.all(detailRequests))
         .catch((error) => console.error(error));
 };
+
+
+pokeAPI.getPokemonByNameOrId = (nameOrId) => {
+    const url = `https://pokeapi.co/api/v2/pokemon/${nameOrId}`;
+    return fetch(url)
+        .then((response) => {
+            if(!response.ok) {
+                throw new Error("Pokémon not found!");
+            }
+            return response.json();
+        })
+        .then(convertPokeAPIDetailsToPokemon)
+        .catch((error) => {
+            console.log(error)
+            return null;
+        })
+}
