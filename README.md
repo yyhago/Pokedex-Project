@@ -7,7 +7,7 @@ A **Pokedex** é um projeto desenvolvido para praticar habilidades de desenvolvi
 ## Screenshots
 
 ### Tela Principal
-![Tela Principal](/pictures/screenMain.PNG)
+![Tela Principal](/pictureScreen/screenMain.PNG)
 
 
 ## Funcionalidades
